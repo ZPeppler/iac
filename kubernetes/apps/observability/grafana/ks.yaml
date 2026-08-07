@@ -26,6 +26,9 @@ spec:
       app.kubernetes.io/name: *app
   components:
     - ../../../../components/kanidm
+  dependsOn:
+    - name: grafana-operator
+      namespace: observability
   interval: 1h
   path: ./kubernetes/apps/observability/grafana/instance
   postBuild:
