@@ -1,4 +1,3 @@
----
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
@@ -59,7 +58,7 @@ spec:
     clusterRoleBinding:
       create: false
     config:
-      baseurl: "https://headlamp.fade-lab.com"
+      baseurl: "https://headlamp.${SECRET_DOMAIN}.com"
       pluginsDir: /build/plugins
     podAnnotations:
       reloader.stakater.com/auto: "true"
