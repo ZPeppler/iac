@@ -8,5 +8,4 @@ cluster:
 machine:
   certSANs:
     - "127.0.0.1"
-    - "192.168.1.153"
-    - "api-k8s.fade-lab.com"
+    - "192.168.1.240"

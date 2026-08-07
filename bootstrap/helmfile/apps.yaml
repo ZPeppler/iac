@@ -29,17 +29,11 @@ releases:
       - template: default
     needs: ["kube-system/cilium"]
 
-  - name: spegel
-    namespace: kube-system
-    inherit:
-      - template: default
-    needs: ["kube-system/coredns"]
-
   - name: cert-manager
     namespace: cert-manager
     inherit:
       - template: default
-    needs: ["kube-system/spegel"]
+    needs: ["kube-system/coredns"]
 
   - name: flux-operator
     namespace: flux-system
