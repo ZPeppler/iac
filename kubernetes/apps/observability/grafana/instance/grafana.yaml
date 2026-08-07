@@ -26,21 +26,21 @@ spec:
       #       name_attribute_path: "name"
       #       groups_attribute_path: "groups"
       #       role_attribute_path: "contains(groups, 'grafana-admins') && 'Admin' || contains(groups, 'grafana-editors') && 'Editor' || 'Viewer'"
-      # log:
-      #   mode: console
-      # metrics:
-      #   enabled: "true"
-      # news:
-      #   news_feed_enabled: "false"
-      # plugins:
-      #   plugin_admin_enabled: "false"
-      # security:
-      #   angular_support_enabled: "true"
-    server:
-      enable_gzip: "true"
-      domain: grafana.${SECRET_DOMAIN}
-      root_url: https://grafana.${SECRET_DOMAIN}
-      enforce_domain: "false"
+    log:
+      mode: console
+    metrics:
+      enabled: "true"
+    news:
+      news_feed_enabled: "false"
+    plugins:
+      plugin_admin_enabled: "false"
+    security:
+      angular_support_enabled: "true"
+      # server:
+      #   enable_gzip: "true"
+      #   domain: grafana.${SECRET_DOMAIN}
+      #   root_url: https://grafana.${SECRET_DOMAIN}
+      #   enforce_domain: "false"
   disableDefaultAdminSecret: true
   disableDefaultSecurityContext: All
   deployment:
@@ -83,13 +83,13 @@ spec:
             - name: grafana-data
               persistentVolumeClaim:
                 claimName: grafana-pvc
-  httpRoute:
-    spec:
-      hostnames:
-        - grafana.${SECRET_DOMAIN}
-      parentRefs:
-        - name: envoy-external
-          namespace: network
+  # httpRoute:
+  #   spec:
+  #     hostnames:
+  #       - grafana.${SECRET_DOMAIN}
+  #     parentRefs:
+  #       - name: envoy-external
+  #         namespace: network
   persistentVolumeClaim:
     spec:
       accessModes:
