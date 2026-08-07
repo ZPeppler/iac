@@ -5,4 +5,5 @@ components:
   - ../../components/sops
 resources:
   - ./namespace.yaml
+  - ./grafana/ks.yaml
   - ./headlamp/ks.yaml
