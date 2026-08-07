@@ -19,7 +19,7 @@ spec:
         kind: Secret
     substitute:
       APP: *app
-      APP-REQUEST: 10Gi
+      APP_REQUEST: 10Gi
   prune: true
   retryInterval: 2m
   sourceRef:
