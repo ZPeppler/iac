@@ -21,5 +21,5 @@ routes:
 apiVersion: v1alpha1
 kind: Layer2VIPConfig
 link: bond0
-name: "192.168.1.240"
+name: "192.168.1.250"
 {{- end }}

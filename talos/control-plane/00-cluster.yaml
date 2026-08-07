@@ -5,7 +5,8 @@ cluster:
       $patch: delete
     certSANs:
       - "127.0.0.1"
-      - "192.168.1.240"
+      - "192.168.1.250"
+      - "api-k8s.fade-lab.com"
     extraArgs:
       # https://kubernetes.io/docs/tasks/extend-kubernetes/configure-aggregation-layer/
       enable-aggregator-routing: true

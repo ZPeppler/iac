@@ -11,7 +11,7 @@ spec:
     type: Kubernetes
     kubernetes:
       envoyDeployment:
-        replicas: 1
+        replicas: 2
         container:
           imageRepository: mirror.gcr.io/envoyproxy/envoy
           resources:
@@ -52,7 +52,7 @@ spec:
   infrastructure:
     annotations:
       external-dns.alpha.kubernetes.io/hostname: external.${SECRET_DOMAIN}
-      lbipam.cilium.io/ips: "192.168.1.243"
+      lbipam.cilium.io/ips: "192.168.1.253"
   listeners:
     - name: http
       protocol: HTTP
@@ -82,7 +82,7 @@ spec:
   infrastructure:
     annotations:
       external-dns.alpha.kubernetes.io/hostname: internal.${SECRET_DOMAIN}
-      lbipam.cilium.io/ips: "192.168.1.241"
+      lbipam.cilium.io/ips: "192.168.1.251"
   listeners:
     - name: http
       protocol: HTTP
