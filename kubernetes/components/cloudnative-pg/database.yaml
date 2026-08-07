@@ -1,0 +1,10 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Database
+metadata:
+  name: ${APP}
+  namespace: database
+spec:
+  cluster:
+    name: postgres
+  name: ${APP}
+  owner: ${APP}
