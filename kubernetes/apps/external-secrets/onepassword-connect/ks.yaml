@@ -8,7 +8,7 @@ spec:
     labels:
       app.kubernetes.io/name: *app
   interval: 1h
-  path: ./kubernetes/apps/security/onepassword-connect/app
+  path: ./kubernetes/apps/external-secrets/onepassword-connect/app
   prune: true
   sourceRef:
     kind: GitRepository
