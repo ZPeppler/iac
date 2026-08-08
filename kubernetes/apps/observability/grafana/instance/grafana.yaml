@@ -90,14 +90,14 @@ spec:
       parentRefs:
         - name: envoy-external
           namespace: network
-          # rules:
-          #   - matches:
-          #       - path:
-          #           type: PathPrefix
-          #           value: /
-          #     backendRefs:
-          #       - name: grafana-service
-          #         port: 3000
+      rules:
+        - matches:
+            - path:
+                type: PathPrefix
+                value: /
+          backendRefs:
+            - name: grafana-service
+              port: 3000
   persistentVolumeClaim:
     spec:
       accessModes:
