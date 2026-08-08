@@ -14,4 +14,4 @@ spec:
       - ${KANIDM_EMAIL}
       - ${KANIDM_EMAIL2}
   posixAttributes:
-    loginshell: /run/current-system/bin/sw/bin/zsh
+    loginshell: /run/current-system/sw/bin/zsh
