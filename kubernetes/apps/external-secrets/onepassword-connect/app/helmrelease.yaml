@@ -11,3 +11,9 @@ spec:
   values:
     connect:
       credentialsName: onepassword-secret
+    api:
+      resources:
+        cpu: 25m
+    sync:
+      resources:
+        cpu: 25m
