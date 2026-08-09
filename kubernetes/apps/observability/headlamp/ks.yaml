@@ -22,9 +22,6 @@ spec:
       KANIDM_GROUP: k8s-admin
       KANIDM_ORIGIN_HOST: headlamp
       KANIDM_REDIRECT_PATH: oidc-callback
-      KANIDM_ADDITIONAL_REDIRECT_URLS:
-        - http://localhost:8000/
-        - http://localhost:18000/
   prune: true
   sourceRef:
     kind: GitRepository
