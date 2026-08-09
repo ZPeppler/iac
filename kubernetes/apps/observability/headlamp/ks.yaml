@@ -1,18 +1,30 @@
----
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: headlamp
+  name: &app headlamp
 spec:
   commonMetadata:
     labels:
-      app.kubernetes.io/name: headlamp
+      app.kubernetes.io/name: *app
+  components:
+    - ../../../../components/kandim
   interval: 1h
   path: ./kubernetes/apps/observability/headlamp/app
   postBuild:
     substituteFrom:
       - name: cluster-secrets
         kind: Secret
+    substitute:
+      APP: *app
+      KANIDM_APP_ICON: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/grafana.svg
+      KANIDM_CLIENT_ID_KEY: *app
+      KANIDM_CLIENT_SECRET_KEY: HEADLAMP_INSTANCE_SECRET_KEY
+      KANIDM_GROUP: k8s-admin
+      KANIDM_ORIGIN_HOST: headlamp
+      KANIDM_REDIRECT_PATH: oidc-callback
+      KANIDM_ADDITIONAL_REDIRECT_URLS:
+        - http://localhost:8000/
+        - http://localhost:18000/
   prune: true
   sourceRef:
     kind: GitRepository
