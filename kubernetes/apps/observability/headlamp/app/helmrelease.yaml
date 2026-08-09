@@ -72,7 +72,7 @@ spec:
           enabled: false
         clientID: "headlamp"
         issuerURL: "https://idm.${SECRET_DOMAIN}/oauth2/openid/headlamp"
-        scopes: "openid,profile,email.groups,offline_access"
+        scopes: "openid,profile,email,groups,offline_access"
     podAnnotations:
       reloader.stakater.com/auto: "true"
     serviceAccount:
