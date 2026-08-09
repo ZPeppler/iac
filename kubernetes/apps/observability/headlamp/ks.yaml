@@ -7,7 +7,7 @@ spec:
     labels:
       app.kubernetes.io/name: *app
   components:
-    - ../../../../components/kandim
+    - ../../../../components/kanidm
   interval: 1h
   path: ./kubernetes/apps/observability/headlamp/app
   postBuild:
