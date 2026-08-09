@@ -18,7 +18,7 @@ spec:
       APP: *app
       KANIDM_APP_ICON: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/grafana.svg
       KANIDM_CLIENT_ID_KEY: *app
-      KANIDM_CLIENT_SECRET_KEY: HEADLAMP_INSTANCE_SECRET_KEY
+      KANIDM_CLIENT_SECRET_KEY: HEADLAMP_SECRET_KEY
       KANIDM_GROUP: k8s-admin
       KANIDM_ORIGIN_HOST: headlamp
       KANIDM_REDIRECT_PATH: oidc-callback

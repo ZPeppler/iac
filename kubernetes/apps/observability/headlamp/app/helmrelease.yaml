@@ -7,6 +7,11 @@ spec:
     kind: OCIRepository
     name: headlamp
   interval: 30m
+  valuesFrom:
+    - kind: Secret
+      name: headlamp-kanidm-oauth2-credentials
+      valuesKey: HEADLAMP_SECRET_KEY
+      targetPath: config.oidc.clientSecret
   values:
     fullnameOverride: headlamp
     initContainers:
@@ -60,6 +65,14 @@ spec:
     config:
       baseurl: "https://headlamp.${SECRET_DOMAIN}.com"
       pluginsDir: /build/plugins
+      oidc:
+        secret:
+          create: false
+        externalSecret:
+          enabled: false
+        clientID: "headlamp"
+        issuerURL: "https://idm.${SECRET_DOMAIN}/oauth2/openid/headlamp"
+        scopes: "openid,profile,email.groups,offline_access"
     podAnnotations:
       reloader.stakater.com/auto: "true"
     serviceAccount:
