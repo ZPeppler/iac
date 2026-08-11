@@ -7,7 +7,7 @@ spec:
   affinity:
     enablePodAntiAffinity: true
     podAntiAffinityType: required
-  imageName: ghcr.io/cloudnative-pg/postgresql:17
+  imageName: ghcr.io/cloudnative-pg/postgresql:18
   instances: 3
   storage:
     storageClass: ceph-block
