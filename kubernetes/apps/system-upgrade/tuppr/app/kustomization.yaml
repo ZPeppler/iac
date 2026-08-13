@@ -4,5 +4,5 @@ namespace: system-upgrade
 components:
   - ../../components/sops
 resources:
-  - ./namespace.yaml
-  - ./tuppr/ks.yaml
+  - ./helmrelease.yaml
+  - ./ocirepository.yaml
