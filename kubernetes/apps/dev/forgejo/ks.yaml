@@ -6,7 +6,6 @@ metadata:
   namespace: &ns dev
 spec:
   components:
-    - ../../../../components/cloudnative-pg/
     - ../../../../components/dragonfly/
   commonMetadata:
     labels:
