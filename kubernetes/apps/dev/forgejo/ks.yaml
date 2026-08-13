@@ -15,6 +15,7 @@ spec:
   postBuild:
     substitute:
       APP: *app
+      NAMESPACE: *ns
   prune: true
   sourceRef:
     kind: GitRepository
