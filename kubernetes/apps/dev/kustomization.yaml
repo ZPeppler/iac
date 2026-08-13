@@ -5,3 +5,4 @@ components:
   - ../../components/sops
 resources:
   - ./namespace.yaml
+  - ./forgejo/ks.yaml
