@@ -10,15 +10,18 @@ spec:
   owner: forgejo
 ---
 apiVersion: postgresql.cnpg.io/v1
-kind: Database
+kind: DatabaseRole
 metadata:
-  name: forgejo
+  name: forgejo-dbrole
   namespace: database
 spec:
   cluster:
     name: postgres
   name: forgejo
-  owner: forgejo
+  ensure: present
+  login: true
+  passwordSecret:
+    name: forgejo-pg
 ---
 # yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/external-secrets.io/externalsecret_v1beta1.json
 apiVersion: external-secrets.io/v1
