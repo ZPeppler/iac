@@ -7,7 +7,6 @@ metadata:
 spec:
   components:
     - ../../../../components/cloudnative-pg/
-    - ../../../../components/dragonfly/
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
@@ -15,7 +14,6 @@ spec:
   postBuild:
     substitute:
       APP: *app
-      NAMESPACE: *ns
   prune: true
   sourceRef:
     kind: GitRepository
