@@ -6,5 +6,6 @@ metadata:
 spec:
   cluster:
     name: postgres
+    namespace: database
   name: ${APP}
   owner: ${APP}
