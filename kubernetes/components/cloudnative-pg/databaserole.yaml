@@ -6,7 +6,6 @@ metadata:
 spec:
   cluster:
     name: postgres
-    namespace: database
   name: ${APP}
   ensure: present
   login: true
