@@ -3,7 +3,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: &app forgejo
-  namespace: &ns dev
+  namespace: dev
 spec:
   commonMetadata:
     labels:
@@ -17,7 +17,7 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  targetNamespace: *ns
+  targetNamespace: dev
   wait: true
   interval: 24h
   retryInterval: 1m
