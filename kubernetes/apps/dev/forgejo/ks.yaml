@@ -18,7 +18,7 @@ spec:
         kind: Secret
     substitute:
       APP: *app
-      APP_REQUEST: 100 Gi
+      APP_REQUEST: 100Gi
   prune: true
   sourceRef:
     kind: GitRepository
