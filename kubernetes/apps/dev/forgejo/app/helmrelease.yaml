@@ -8,6 +8,10 @@ spec:
     name: *app
   interval: 30m
   valuesFrom:
+    - kind: Secret
+      name: forgejo-admin
+      valuesKey: pg_pass
+      targetPath: gitea.config.database.PASSWORD
   values:
     gitea:
       admin:
@@ -16,6 +20,8 @@ spec:
         email: info@fade-lab.com
         passwordMode: keepUpdated
     config:
+      server:
+        ROOT_URL: https://git.${SECRET_DOMAIN}
       database:
         DB_TYPE: postgres
         HOST: postgres-rw.database.svc.cluster.local:5432
@@ -38,3 +44,7 @@ spec:
     enabled: false
   redis-cluster:
     enabled: false
+  persistence:
+    enabled: true
+    create: false
+    claimName: forgejo-pvc
