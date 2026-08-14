@@ -8,3 +8,8 @@ spec:
     name: *app
   interval: 30m
   values:
+    gitea:
+      admin:
+        username: ""
+      additionalConfigSources:
+        - secret:

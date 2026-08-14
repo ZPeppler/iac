@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ./ocirepository.yaml
   - ./httproute.yaml
+  - ./externalsecret.yaml
