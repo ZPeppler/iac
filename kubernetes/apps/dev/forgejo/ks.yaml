@@ -7,13 +7,18 @@ metadata:
 spec:
   components:
     - ../../../../components/dragonfly
+    - ../../../../components/rook-ceph
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
   path: ./kubernetes/apps/dev/forgejo/app
   postBuild:
+    substituteFrom:
+      - name: cluster-secrets
+        kind: Secret
     substitute:
       APP: *app
+      APP_REQUEST: 100 Gi
   prune: true
   sourceRef:
     kind: GitRepository
