@@ -13,7 +13,7 @@ spec:
     - backendRefs:
         - kind: Service
           name: forgejo-http
-          port: 30000
+          port: 3000
       matches:
         - path:
             type: PathPrefix
