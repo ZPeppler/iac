@@ -46,6 +46,13 @@ spec:
         oauth2_client:
           ENABLE_AUTO_REGISTRATION: true
           USERNAME: preferred_username
+        cron.update_mirrors:
+          ENABLED: true
+          SCHEDULE: "@every 10m"
+        mirror:
+          ENABLED: true
+          DEFAULT_INTERVAL: 10m
+          MIN_INTERVAL: 10m
       oauth:
         - name: kanidm
           provider: openidConnect
