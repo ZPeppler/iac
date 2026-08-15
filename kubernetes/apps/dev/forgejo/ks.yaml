@@ -7,6 +7,7 @@ metadata:
 spec:
   components:
     - ../../../../components/dragonfly
+    - ../../../../components/kanidm
     - ../../../../components/rook-ceph
   commonMetadata:
     labels:
@@ -19,6 +20,12 @@ spec:
     substitute:
       APP: *app
       APP_REQUEST: 100Gi
+      KANIDM_APP_ICON: https://commons.wikimedia.org/wiki/File:Forgejo_logo.svg
+      KANIDM_CLIENT_ID_KEY: *app
+      KANIDM_CLIENT_SECRET_KEY: FORGEJO_SECRET_KEY
+      KANIDM_GROUP: k8s-admin
+      KANIDM_ORIGIN_HOST: git
+      KANIDM_REDIRECT_PATH: callback
   prune: true
   sourceRef:
     kind: GitRepository
