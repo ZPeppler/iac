@@ -25,7 +25,7 @@ spec:
       KANIDM_CLIENT_SECRET_KEY: FORGEJO_SECRET_KEY
       KANIDM_GROUP: k8s-admin
       KANIDM_ORIGIN_HOST: git
-      KANIDM_REDIRECT_PATH: callback
+      KANIDM_REDIRECT_PATH: user/oauth2/kanidm/callback
   prune: true
   sourceRef:
     kind: GitRepository
