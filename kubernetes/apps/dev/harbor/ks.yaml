@@ -6,6 +6,7 @@ metadata:
   namespace: dev
 spec:
   components:
+    - ../../../../components/dragonfly
     - ../../../../components/kanidm
     - ../../../../components/rook-ceph
   commonMetadata:
