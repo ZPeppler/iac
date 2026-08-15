@@ -12,6 +12,10 @@ spec:
       name: forgejo-admin
       valuesKey: pg_pass
       targetPath: gitea.config.database.PASSWD
+    - kind: Secret
+      name: forgejo-kanidm-oauth2-credentials
+      valuesKey: FORGEJO_SECRET_KEY
+      targetPath: gitea.oauth[0].secret
   values:
     gitea:
       admin:
@@ -38,6 +42,11 @@ spec:
           CONN_STR: redis://forgejo-dragonfly.dev.svc.cluster.local:6379/2
         service:
           DISABLE_REGISTRATION: true
+      oauth:
+        - name: kanidm
+          provider: openidConnect
+          key: *app
+          autoDiscoverUrl: https://idm.${SECRET_DOMAIN}/oauth2/openid/forgejo/.well-known/openid-configuration
     postgresql:
       enabled: false
     postgresql-ha:
