@@ -41,7 +41,11 @@ spec:
           TYPE: redis
           CONN_STR: redis://forgejo-dragonfly.dev.svc.cluster.local:6379/2
         service:
-          DISABLE_REGISTRATION: true
+          DISABLE_REGISTRATION: false
+          ALLOW_ONLY_EXTERNAL_REGISTRATION: true
+        oauth2_client:
+          ENABLE_AUTO_REGISTRATION: true
+          USERNAME: preferred_username
       oauth:
         - name: kanidm
           provider: openidConnect
