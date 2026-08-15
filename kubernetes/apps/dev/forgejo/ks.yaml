@@ -20,7 +20,7 @@ spec:
     substitute:
       APP: *app
       APP_REQUEST: 100Gi
-      KANIDM_APP_ICON: https://commons.wikimedia.org/wiki/File:Forgejo_logo.svg
+      KANIDM_APP_ICON: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/forgejo.svg
       KANIDM_CLIENT_ID_KEY: *app
       KANIDM_CLIENT_SECRET_KEY: FORGEJO_SECRET_KEY
       KANIDM_GROUP: k8s-admin
