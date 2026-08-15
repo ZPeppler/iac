@@ -40,7 +40,7 @@ spec:
       KANIDM_APP_ICON: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/grafana.svg
       KANIDM_CLIENT_ID_KEY: *app
       KANIDM_CLIENT_SECRET_KEY: GF_INSTANCE_SECRET_KEY
-      KANIDM_GROUP: k8s-admin
+      KANIDM_GROUP: grafana-user
       KANIDM_ORIGIN_HOST: grafana
       KANIDM_REDIRECT_PATH: login/generic_oauth
   prune: true
