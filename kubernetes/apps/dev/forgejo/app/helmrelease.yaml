@@ -11,7 +11,7 @@ spec:
     - kind: Secret
       name: forgejo-admin
       valuesKey: pg_pass
-      targetPath: gitea.config.database.PASSWORD
+      targetPath: gitea.config.database.PASSWD
   values:
     gitea:
       admin:
