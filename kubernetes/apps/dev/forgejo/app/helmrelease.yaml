@@ -36,6 +36,8 @@ spec:
         queue:
           TYPE: redis
           CONN_STR: redis://forgejo-dragonfly.dev.svc.cluster.local:6379/2
+        service:
+          DISABLE_REGISTRATION: true
     postgresql:
       enabled: false
     postgresql-ha:
