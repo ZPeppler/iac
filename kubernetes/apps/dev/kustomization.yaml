@@ -6,3 +6,4 @@ components:
 resources:
   - ./namespace.yaml
   - ./forgejo/ks.yaml
+  - ./harbor/ks.yaml
