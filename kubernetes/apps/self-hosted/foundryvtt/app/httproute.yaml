@@ -20,7 +20,7 @@ metadata:
   name: foundryvtt-internal
 spec:
   hostnames:
-    - fvtt11.${SECRET_DOMAIN}
+    - fvtt.internal.${SECRET_DOMAIN}
   parentRefs:
     - name: envoy-internal
       namespace: network
