@@ -6,6 +6,7 @@ metadata:
 spec:
   components:
     - ../../../../components/rook-ceph
+    - ../../../../components/cloudnative-pg
   dependsOn:
     - name: rook-ceph-cluster
       namespace: rook-ceph
