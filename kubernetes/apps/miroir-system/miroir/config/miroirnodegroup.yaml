@@ -1,0 +1,17 @@
+---
+# yaml-language-server: $schema=https://k8s-schemas.home-operations.com/miroir.home-operations.com/miroirnodegroup_v1alpha1.json
+apiVersion: miroir.home-operations.com/v1alpha1
+kind: MiroirNodeGroup
+metadata:
+  name: zfs
+spec:
+  nodeSelector:
+    matchLabels:
+      storage.mirior.home-operations.com/class: zfs
+  template:
+    pools:
+      - name: default
+        zfs:
+          dataset: data-pool/miroir
+          volBlockSize: 16K
+          compression: inherit
