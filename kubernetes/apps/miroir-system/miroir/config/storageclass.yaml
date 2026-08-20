@@ -8,6 +8,7 @@ allowVolumeExpansion: true
 parameters:
   csi.storage.k8s.io/fstype: ext4
   miroir.home-operations.com/replicas: "1"
+  miroir.home-operations.com/pool: default
 provisioner: miroir.home-operations.com
 reclaimPolicy: Delete
 volumeBindingMode: WaitForFirstConsumer
@@ -22,6 +23,7 @@ parameters:
   csi.storage.k8s.io/fstype: ext4
   miroir.home-operations.com/quorum: last-man-standing
   miroir.home-operations.com/replicas: "2"
+  miroir.home-operations.com/pool: default
 provisioner: miroir.home-operations.com
 reclaimPolicy: Delete
 volumeBindingMode: WaitForFirstConsumer
