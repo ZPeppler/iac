@@ -5,4 +5,4 @@ components:
   - ../../components/sops
 resources:
   - ./namespace.yaml
-  - ./foundryvtt/ks.yaml
+  # - ./foundryvtt/ks.yaml
