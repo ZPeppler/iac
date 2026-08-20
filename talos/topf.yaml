@@ -53,7 +53,7 @@ nodes:
       macAddr: "98:fa:9b:1e:cc:53"
       mtu: 1500
       encryptDisk: false
-      kernelModules: [drbd]
+      kernelModules: []
   - host: "talos-w2"
     ip: "192.168.1.248"
     role: worker
@@ -64,7 +64,7 @@ nodes:
       macAddr: "98:fa:9b:21:ab:eb"
       mtu: 1500
       encryptDisk: false
-      kernelModules: [drbd]
+      kernelModules: []
   - host: "talos-w3"
     ip: "192.168.1.249"
     role: worker
@@ -75,4 +75,4 @@ nodes:
       macAddr: "98:fa:9b:21:af:b4"
       mtu: 1500
       encryptDisk: false
-      kernelModules: [drbd]
+      kernelModules: []

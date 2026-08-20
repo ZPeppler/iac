@@ -12,4 +12,4 @@ spec:
     pools:
       - name: default
         lvmthin:
-          device: /dev/disk/by-partlabel/r-mirror
+          device: /dev/disk/by-partlabel/r-miroir
