@@ -1,0 +1,8 @@
+apiVersion: v1alpha1
+kind: RawVolumeConfig
+name: miroir
+provisioning:
+  diskSelector:
+    match: disk.wwid=="naa.5001b448b285ecb6"
+  minSize: 100GiB
+  grow: true
