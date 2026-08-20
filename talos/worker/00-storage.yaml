@@ -5,3 +5,6 @@ machine:
         parameters:
           - usermode_helper=disabled
       - name: drbd_transport_tcp
+  nodeLabels:
+    storage: miroir
+    storage.miroir.home-operations.com/class: zfs
