@@ -22,10 +22,10 @@ spec:
     monitoring:
       dashboards:
         enabled: true
-        grafanaOperator:
-          enabled: true
-          matchLabels:
-            dashboards: grafana
+        # grafanaOperator:
+        #   enabled: true
+        #   matchLabels:
+        #     dashboards: grafana
       podMonitor:
         enabled: true
       prometheusRule:
