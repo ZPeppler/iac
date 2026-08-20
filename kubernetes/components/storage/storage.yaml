@@ -6,6 +6,6 @@ spec:
   resources:
     requests:
       storage: ${APP_REQUEST}
-  storageClassName: ceph-block
+  storageClassName: ${APP_STORAGE_CLASS:=miroir-local}
   accessModes:
     - ReadWriteOnce
