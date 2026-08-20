@@ -3,15 +3,13 @@
 apiVersion: miroir.home-operations.com/v1alpha1
 kind: MiroirNodeGroup
 metadata:
-  name: zfs
+  name: std
 spec:
   nodeSelector:
     matchLabels:
-      storage.mirior.home-operations.com/class: zfs
+      storage.mirior.home-operations.com/class: std
   template:
     pools:
       - name: default
-        zfs:
-          dataset: data-pool/miroir
-          volBlockSize: 16K
-          compression: inherit
+        lvmthin:
+          device: /dev/disk/by-partlabel/r-mirror

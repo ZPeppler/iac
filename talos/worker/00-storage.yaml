@@ -7,4 +7,4 @@ machine:
       - name: drbd_transport_tcp
   nodeLabels:
     storage: miroir
-    storage.miroir.home-operations.com/class: zfs
+    storage.miroir.home-operations.com/class: std
