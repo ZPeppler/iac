@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: miroir-system
 resources:
   - ./namespace.yaml
-  - ./miroir/ks.yaml
+  # - ./miroir/ks.yaml
