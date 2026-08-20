@@ -1,10 +1,14 @@
+---
 clusterName: kubernetes
 clusterEndpoint: https://192.168.1.250:6443
+
 # renovate: datasource=docker depName=ghcr.io/siderolabs/installer
 talosVersion: v1.13.8
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
 kubernetesVersion: v1.36.3
+
 secretsPath: secrets.sops.yaml
+
 nodes:
   - host: "talos-c1"
     ip: "192.168.1.244"
@@ -42,7 +46,7 @@ nodes:
   - host: "talos-w1"
     ip: "192.168.1.247"
     role: worker
-    schematicId: "376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba"
+    schematicId: "98442b5bb4e8d050f30978ce3e6ec22e7bf534d57cafcd51313235128057e612"
     data:
       installDisk: "/dev/disk/by-id/nvme-SK_hynix_BC501_HFM512GDJTNG-8310A_NN97N48071210793Q"
       installDiskSerial: ""
@@ -53,7 +57,7 @@ nodes:
   - host: "talos-w2"
     ip: "192.168.1.248"
     role: worker
-    schematicId: "376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba"
+    schematicId: "98442b5bb4e8d050f30978ce3e6ec22e7bf534d57cafcd51313235128057e612"
     data:
       installDisk: "/dev/disk/by-id/nvme-SK_hynix_BC501_HFM512GDJTNG-8310A_NN97N48071210790J"
       installDiskSerial: ""
@@ -64,7 +68,7 @@ nodes:
   - host: "talos-w3"
     ip: "192.168.1.249"
     role: worker
-    schematicId: "376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba"
+    schematicId: "98442b5bb4e8d050f30978ce3e6ec22e7bf534d57cafcd51313235128057e612"
     data:
       installDisk: "/dev/disk/by-id/nvme-SK_hynix_BC501_HFM512GDJTNG-8310A_NJ97N511413207C50"
       installDiskSerial: ""
