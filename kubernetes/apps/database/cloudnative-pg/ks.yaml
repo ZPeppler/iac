@@ -31,6 +31,8 @@ spec:
       namespace: database
     - name: external-secrets
       namespace: external-secrets
+    - name: miroir-config
+      namespace: miroir-system
   healthChecks:
     - apiVersion: postgresql.cnpg.io/v1
       kind: Cluster
