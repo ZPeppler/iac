@@ -24,6 +24,8 @@ spec:
   dependsOn:
     - name: miroir
       namespace: miroir-system
+    - name: snapshot-controller
+      namespace: kube-system
   interval: 1h
   path: "./kubernetes/apps/miroir-system/miroir/config"
   prune: true
