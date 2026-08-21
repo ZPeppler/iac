@@ -5,5 +5,6 @@ machine:
         parameters:
           - usermode_helper=disabled
       - name: drbd_transport_tcp
+      - name: dm_thin_pool
   nodeLabels:
     storage.miroir.home-operations.com/class: std
