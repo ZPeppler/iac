@@ -38,7 +38,7 @@ spec:
   replicaGroups:
     - name: default
       primaryNode: true
-      replicas: 3
+      replicas: 1
       resources:
         requests:
           cpu: 10m
