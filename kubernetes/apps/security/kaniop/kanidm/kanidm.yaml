@@ -21,11 +21,20 @@ spec:
       env:
         - name: KANIDM_DOMAIN
           value: idm.${SECRET_DOMAIN}
+        - name: KANIDM_ORIGIN
+          value: https://idm.${SECRET_DOMAIN}
         - name: KANIDM_DB_PATH
           value: /data/kanidm.db
+        - name: KANIDM_TLS_CHAIN
+          value: /etc/kanidm/tls/tls.crt
+        - name: KANIDM_TLS_KEY
+          value: /etc/kanidm/tls/tls.key
       volumeMounts:
         - name: kanidm-data
           mountPath: /data
+        - name: kanidm-certs
+          mountPath: /etc/kanidm/tls
+          readOnly: true
   replicaGroups:
     - name: default
       primaryNode: true
