@@ -6,6 +6,8 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: ceph-csi-driver
+  dependsOn:
+    - name: rook-ceph
   interval: 1h
   path: ./kubernetes/apps/rook-ceph/ceph-csi-driver/operator
   prune: true
