@@ -6,3 +6,4 @@ resources:
   - ./rbac.yaml
   - ./ocirepository.yaml
   - ./helmrelease.yaml
+  - ./oauth2client.yaml
