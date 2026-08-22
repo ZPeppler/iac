@@ -5,12 +5,16 @@ metadata:
   name: kanidm
 spec:
   domain: idm.${SECRET_DOMAIN}
-  image: docker.io/kanidm/server:1.11.1@sha256:7c3d7ed868e91f78c24a7fb9c548876563b375a4203021b730d58369b97ad154
+  groupNamespaceSelector: {}
+  oauth2ClientNamespaceSelector: {}
+  personNamespaceSelector: {}
+  serviceAccountNamespaceSelector: {}
+  image: docker.io/kanidm/server:1.11.1
   logLevel: info
   replicaGroups:
     - name: default
       primaryNode: true
-      replicas: 1
+      replicas: 3
       resources:
         requests:
           cpu: 10m
@@ -19,22 +23,6 @@ spec:
           memory: 512Mi
       statefulSetAnnotations:
         reloader.stakater.com/auto: "true"
-  securityContext:
-    fsGroup: 1000
-    fsGroupChangePolicy: OnRootMismatch
-    runAsGroup: 1000
-    runAsNonRoot: true
-    runAsUser: 1000
-    seccompProfile:
-      type: RuntimeDefault
-  containers:
-    - name: kanidm
-      securityContext:
-        allowPrivilegeEscalation: false
-        capabilities:
-          drop:
-            - ALL
-        readOnlyRootFilesystem: true
   storage:
     volumeClaimTemplate:
       spec:
@@ -42,7 +30,7 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 1Gi
+            storage: 100Mi
         storageClassName: ceph-block
   tlsSecretName: idm-${SECRET_DOMAIN/./-}-tls
   gateway:
@@ -58,7 +46,3 @@ spec:
       validation:
         hostname: idm.${SECRET_DOMAIN}
         wellKnownCaCertificates: System
-  groupNamespaceSelector: {}
-  oauth2ClientNamespaceSelector: {}
-  personNamespaceSelector: {}
-  serviceAccountNamespaceSelector: {}

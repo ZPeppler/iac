@@ -16,3 +16,6 @@ spec:
     size: 256
   renewBefore: 360h
   secretName: "idm-${SECRET_DOMAIN/./-}-tls"
+  usages:
+    - digital signature
+    - key encipherment

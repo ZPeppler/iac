@@ -9,6 +9,16 @@ spec:
     name: kaniop
   interval: 30m
   values:
+    deploymentAnnotations:
+      reloader.stakater.com/auto: "true"
+    webhook:
+      enabled: true
+    metrics:
+      enabled: true
+      serviceMintor:
+        enabled: true
+      dashboards:
+        enabled: true
     resources:
       requests:
         cpu: 10m
