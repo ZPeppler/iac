@@ -5,5 +5,5 @@ components:
   - ../../components/sops
 resources:
   - ./namespace.yaml
-  # - ./ceph-csi-driver/ks.yaml
-  # - ./rook-ceph/ks.yaml
+  - ./ceph-csi-driver/ks.yaml
+  - ./rook-ceph/ks.yaml
