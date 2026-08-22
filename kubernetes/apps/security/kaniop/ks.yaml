@@ -62,7 +62,7 @@ spec:
   dependsOn:
     - name: kaniop
       namespace: security
-    - name: kaniop-secrets
+    - name: kanidm-secrets
       namespace: security
     - name: rook-ceph-cluster
       namespace: rook-ceph
