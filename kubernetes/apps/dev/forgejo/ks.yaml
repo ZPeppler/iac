@@ -8,7 +8,7 @@ spec:
   components:
     - ../../../../components/dragonfly
     - ../../../../components/kanidm
-    - ../../../../components/rook-ceph
+    - ../../../../components/storage
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
