@@ -24,6 +24,9 @@ subjects:
   - kind: ServiceAccount
     name: headlamp-admin
     namespace: observability
+  - kind: Group
+    name: k8s-admin
+    apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -61,3 +64,6 @@ subjects:
   - kind: ServiceAccount
     name: headlamp-admin
     namespace: observability
+  - kind: Group
+    name: k8s-admin
+    apiGroup: rbac.authorization.k8s.io
