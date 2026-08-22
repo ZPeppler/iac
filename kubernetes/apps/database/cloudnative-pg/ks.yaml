@@ -31,8 +31,8 @@ spec:
       namespace: database
     - name: external-secrets
       namespace: external-secrets
-    - name: miroir-config
-      namespace: miroir-system
+    - name: rook-ceph-cluster
+      namespace: rook-ceph
   healthChecks:
     - apiVersion: postgresql.cnpg.io/v1
       kind: Cluster

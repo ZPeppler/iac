@@ -27,6 +27,7 @@ spec:
       app.kubernetes.io/name: rook-ceph
   dependsOn:
     - name: rook-ceph
+    - name: ceph-csi-driver
   healthChecks:
     - apiVersion: ceph.rook.io/v1
       kind: CephCluster

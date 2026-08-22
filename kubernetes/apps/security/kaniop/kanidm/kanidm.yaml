@@ -43,7 +43,7 @@ spec:
         resources:
           requests:
             storage: 1Gi
-        storageClassName: miroir-replicated
+        storageClassName: ceph-block
   tlsSecretName: idm-${SECRET_DOMAIN/./-}-tls
   gateway:
     parentRefs:

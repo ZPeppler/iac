@@ -7,8 +7,8 @@ spec:
   components:
     - ../../../../components/storage
   dependsOn:
-    - name: miroir-config
-      namespace: miroir-system
+    - name: rook-ceph-cluster
+      namespace: rook-ceph
     - name: external-secrets
       namespace: external-secrets
   interval: 1h

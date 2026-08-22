@@ -11,7 +11,7 @@ spec:
   imageName: ghcr.io/cloudnative-pg/postgresql:18
   instances: 3
   storage:
-    storageClass: miroir-local
+    storageClass: ceph-block
     size: 25Gi
   primaryUpdateStrategy: unsupervised
   resources:
