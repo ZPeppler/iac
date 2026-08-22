@@ -62,6 +62,8 @@ spec:
   dependsOn:
     - name: kaniop
       namespace: security
+    - name: kaniop-secrets
+      namespace: security
     - name: rook-ceph-cluster
       namespace: rook-ceph
   interval: 30m
