@@ -66,7 +66,7 @@ spec:
       baseurl: "https://headlamp.${SECRET_DOMAIN}"
       pluginsDir: /build/plugins
       oidc:
-        clientId: *app
+        clientId: headlamp
         issuerURL: https://idm.${SECRET_DOMAIN}/oauth2/openid/headlamp
         scopes: "openid profile email offline_access"
     podAnnotations:
