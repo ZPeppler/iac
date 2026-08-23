@@ -14,7 +14,3 @@ spec:
         - name: grafana
           namespace: observability
           port: 3000
-      matches:
-        - path:
-            type: PathPrefix
-            value: /
