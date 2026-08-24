@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - ./cluster.yaml
   - ./externalsecret.yaml
-  # - ./databases/forgejo.yaml
+  - ./databases/forgejo.yaml
