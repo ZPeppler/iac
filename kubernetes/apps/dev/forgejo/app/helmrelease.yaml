@@ -25,7 +25,9 @@ spec:
         passwordMode: keepUpdated
       config:
         server:
+          DOMAIN: git.${SECRET_DOMAIN}
           ROOT_URL: https://git.${SECRET_DOMAIN}
+          SSH_DOMAIN: git.${SECRET_DOMAIN}
         database:
           DB_TYPE: postgres
           HOST: postgres-rw.database.svc.cluster.local:5432
@@ -70,3 +72,7 @@ spec:
       enabled: true
       create: false
       claimName: forgejo-pvc
+    services:
+      ssh:
+        type: ClusterIP
+        port: 22
