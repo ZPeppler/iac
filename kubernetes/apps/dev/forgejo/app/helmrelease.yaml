@@ -25,9 +25,10 @@ spec:
         passwordMode: keepUpdated
       config:
         server:
-          DOMAIN: git.${SECRET_DOMAIN}
+          APP_DATA_PATH: /data/gitea
           ROOT_URL: https://git.${SECRET_DOMAIN}
           SSH_DOMAIN: git.${SECRET_DOMAIN}
+          SSH_PORT: &sshPort 22
         database:
           DB_TYPE: postgres
           HOST: postgres-rw.database.svc.cluster.local:5432
@@ -55,11 +56,24 @@ spec:
           ENABLED: true
           DEFAULT_INTERVAL: 10m
           MIN_INTERVAL: 10m
+        security:
+          REVERSE_PROXY_TRUSTED_PROXIES: 10.42.0.0/16
       oauth:
         - name: kanidm
           provider: openidConnect
           key: *app
           autoDiscoverUrl: https://idm.${SECRET_DOMAIN}/oauth2/openid/forgejo/.well-known/openid-configuration
+    httpRoute:
+      enabled: false
+    image:
+      rootlesss: true
+      registry: code.forgejo.org
+      repository: forgejo/forgejo
+      tag: 16.0.3-rootless
+    persistence:
+      enabled: true
+      create: false
+      claimName: forgejo-pvc
     postgresql:
       enabled: false
     postgresql-ha:
@@ -68,11 +82,12 @@ spec:
       enabled: false
     redis-cluster:
       enabled: false
-    persistence:
-      enabled: true
-      create: false
-      claimName: forgejo-pvc
     services:
       ssh:
-        type: ClusterIP
-        port: 22
+        port: *sshPort
+    tcpRoute:
+      enabled: true
+      parentRefs:
+        - name: envoy-external
+          namespace: network
+          sectionName: ssh
