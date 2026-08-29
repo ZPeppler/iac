@@ -1,12 +1,19 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: ["github>home-operations/renovate-presets#8.1.0"],
+  hostRules: [
+    {
+      matchHost: "code.forgejo.org",
+      hostType: "docker",
+      enabled: true,
+    },
+  ],
   schedule: ["every weekend"],
   lockFileMaintenance: {
     enabled: true,
     schedule: ["before 3am on the first day of the month"],
     commitMessageExtra: "({{manager}})",
-    additionalBranchPrefix: "{{manager}}-"
+    additionalBranchPrefix: "{{manager}}-",
   },
   packageRules: [
     {
