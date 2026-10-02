@@ -192,38 +192,38 @@ url_api = "https://api.github.com/repos/cli/cli/releases/assets/496108319"
 provenance = "github-attestations"
 
 [[tools."github:postfinance/topf"]]
-version = "0.5.0"
+version = "0.6.1"
 backend = "github:postfinance/topf"
 
 [tools."github:postfinance/topf"."platforms.linux-arm64"]
-checksum = "sha256:d8aa6515ae9de54588fc0bba3fad9fe37a93c08cf20adc931baed4a67912cef1"
-url = "https://github.com/postfinance/topf/releases/download/v0.5.0/topf_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/508553235"
+checksum = "sha256:5e7098153ca06ad5577b4f5d5cd380b1de7d7b65505bd8aa160c9181a2b101c5"
+url = "https://github.com/postfinance/topf/releases/download/v0.6.1/topf_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/597558298"
 
 [tools."github:postfinance/topf"."platforms.linux-arm64-musl"]
-checksum = "sha256:d8aa6515ae9de54588fc0bba3fad9fe37a93c08cf20adc931baed4a67912cef1"
-url = "https://github.com/postfinance/topf/releases/download/v0.5.0/topf_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/508553235"
+checksum = "sha256:5e7098153ca06ad5577b4f5d5cd380b1de7d7b65505bd8aa160c9181a2b101c5"
+url = "https://github.com/postfinance/topf/releases/download/v0.6.1/topf_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/597558298"
 
 [tools."github:postfinance/topf"."platforms.linux-x64"]
-checksum = "sha256:0a5ba8187887972acc7905cf12e804317b1869219bbf070d8dd2a9e29b70570c"
-url = "https://github.com/postfinance/topf/releases/download/v0.5.0/topf_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/508553236"
+checksum = "sha256:6f399e527cb8588b02d7d28eae9a61c49680f4cd5e82d98be7a5c5001c80d341"
+url = "https://github.com/postfinance/topf/releases/download/v0.6.1/topf_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/597558300"
 
 [tools."github:postfinance/topf"."platforms.linux-x64-musl"]
-checksum = "sha256:0a5ba8187887972acc7905cf12e804317b1869219bbf070d8dd2a9e29b70570c"
-url = "https://github.com/postfinance/topf/releases/download/v0.5.0/topf_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/508553236"
+checksum = "sha256:6f399e527cb8588b02d7d28eae9a61c49680f4cd5e82d98be7a5c5001c80d341"
+url = "https://github.com/postfinance/topf/releases/download/v0.6.1/topf_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/597558300"
 
 [tools."github:postfinance/topf"."platforms.macos-arm64"]
-checksum = "sha256:e7de2cde889c1fba552a35c18e500f03ca120d79eb1a7643ee7503eb2572c166"
-url = "https://github.com/postfinance/topf/releases/download/v0.5.0/topf_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/508553237"
+checksum = "sha256:e7d894ad2b1303ee4e00ebcd5d3a057690497a31694d03c1f533ceaae348fc9d"
+url = "https://github.com/postfinance/topf/releases/download/v0.6.1/topf_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/597558301"
 
 [tools."github:postfinance/topf"."platforms.macos-x64"]
-checksum = "sha256:5075cf8120e2512065b174f444c725171663b2155faeceab5f85d45bb6740ea1"
-url = "https://github.com/postfinance/topf/releases/download/v0.5.0/topf_darwin_amd64.tar.gz"
-url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/508553239"
+checksum = "sha256:cc15ef60d1d6ec852285fac64f3cac4fed18e6ffd59c996dd403d38ac8872233"
+url = "https://github.com/postfinance/topf/releases/download/v0.6.1/topf_darwin_amd64.tar.gz"
+url_api = "https://api.github.com/repos/postfinance/topf/releases/assets/597558295"
 
 [[tools.gum]]
 version = "2.0.0"
@@ -577,7 +577,7 @@ url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/47
 provenance = "github-attestations"
 
 [[tools.oxfmt]]
-version = "0.65.0"
+version = "0.71.0"
 backend = "npm:oxfmt"
 
 [[tools.sd]]
