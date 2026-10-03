@@ -6,4 +6,4 @@ components:
   - ../../components/sops
 resources:
   - ./namespace.yaml
-  - ./kaniop/ks.yaml
+  # - ./kaniop/ks.yaml
